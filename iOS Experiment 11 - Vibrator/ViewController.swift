@@ -7,9 +7,15 @@
 //
 
 import UIKit
-
+import AudioToolbox
 class ViewController: UIViewController {
 
+    @IBAction func startVibration(_ sender: Any) {
+        for _ in 1...5{
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+            sleep(1)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,4 +28,5 @@ class ViewController: UIViewController {
 
 
 }
+
 
